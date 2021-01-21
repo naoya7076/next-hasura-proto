@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import { NextPage } from 'next';
 import Error from 'next/error';
+import { Article } from '@/components/article';
 
 import { useGetArticleQuery } from '@/generated/graphql';
 
@@ -40,7 +41,7 @@ const ArticlePage: NextPage = () => {
           <div className={styles.userName}>{user.displayName}</div>
         </div>
       </div>
-      <div className={styles.content}>{content}</div>
+      <Article content={content} />
     </div>
   );
 };
