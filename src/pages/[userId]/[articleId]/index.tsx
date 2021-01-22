@@ -26,7 +26,8 @@ const ArticlePage: NextPage = () => {
     return <Error statusCode={404} />;
   }
 
-  const { user, subject, content } = data.articles_by_pk;
+  const { user, subject, content, published_at } = data.articles_by_pk;
+  console.log(published_at);
   return (
     <div className={styles.contentContainer}>
       <h1 className={styles.subject}>{subject}</h1>
